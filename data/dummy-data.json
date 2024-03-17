@@ -1,0 +1,82 @@
+{
+  "User_Roles": {
+    "Buyer": "Makes purchases on the platform.",
+    "Seller": "Lists and sells anime figures on the platform."
+  },
+  "Data_Fields": {
+    "Common": {
+      "User_ID": "Unique identifier for each user (e.g., UBR-1234 for Buyer, SLR-5678 for Seller)",
+      "Username": "User-chosen name for login (unique).",
+      "Email": "User's email address (unique).",
+      "Password": "Securely hashed password for login.",
+      "Name": "User's full name (optional).",
+      "Shipping_Address": "User's shipping address for purchases (optional for Buyer, required for Seller)."
+    },
+    "Buyer_Specific": {
+      "Wishlist": "List of figure IDs the user has marked as favorites.",
+      "Order_History": "Record of past purchases, including order ID, date, items purchased, total amount, and shipping status."
+    },
+    "Seller_Specific": {
+      "Store_Name": "Seller's designated shop name on the platform.",
+      "Inventory": "List of figure IDs with corresponding details like quantity, price, figure name, series, manufacturer, description, and images.",
+      "Sold_Listings": "Record of figures sold, including figure ID, quantity sold, date of sale, and total amount earned."
+    }
+  },
+  "Demo_User_Data": {
+    "Buyer": {
+      "User_ID": "UBR-1234",
+      "Username": "AnimeFanatic",
+      "Email": "animefanatic@email.com",
+      "Password": "(Hashed for security)",
+      "Name": "Alice Jones (Optional)",
+      "Shipping_Address": "123 Main Street, Anytown, CA 12345 (Optional)",
+      "Wishlist": ["FIG-0001", "FIG-0005"],
+      "Order_History": {
+        "Order_ID": "ORD-0001",
+        "Date": "2024-03-15",
+        "Items_Purchased": {
+          "FIG-0002": 1
+        },
+        "Total_Amount": 29.99,
+        "Shipping_Status": "Shipped"
+      }
+    },
+    "Seller": {
+      "User_ID": "SLR-5678",
+      "Username": "FigureSeller",
+      "Email": "figureseller@email.com",
+      "Password": "(Hashed for security)",
+      "Name": "Bob Smith (Optional)",
+      "Shipping_Address": "456 Elm Street, Springfield, NY 54321",
+      "Store_Name": "Anime Figures Galore",
+      "Inventory": {
+        "FIG-0001": {
+          "Quantity": 5,
+          "Price": 19.99,
+          "Figure_Name": "Monkey D. Luffy Gear 5",
+          "Series": "One Piece",
+          "Manufacturer": "Bandai",
+          "Description": "Highly detailed figure of Luffy in his Gear 5 transformation.",
+          "Images": ["image1.jpg", "image2.jpg", "image3.jpg"]
+        },
+        "FIG-0002": {
+          "Quantity": 2,
+          "Price": 29.99,
+          "Figure_Name": "Naruto Uzumaki Sage Mode",
+          "Series": "Naruto Shippuden",
+          "Manufacturer": "Megahouse",
+          "Description": "Captures Naruto in his powerful Sage Mode form.",
+          "Images": ["image4.jpg", "image5.jpg"]
+        },
+        "... (List of additional figures in the Seller's inventory)"
+      },
+      "Sold_Listings": {
+        "Order_ID": "ORD-0001",
+        "Figure_ID": "FIG-0002",
+        "Quantity_Sold": 1,
+        "Date_of_Sale": "2024-03-15",
+        "Total_Amount_Earned": 29.99
+      }
+    }
+  }
+}
