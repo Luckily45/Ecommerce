@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "an ecommerse api for multi vendor sellers",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [
     "okami@980",
